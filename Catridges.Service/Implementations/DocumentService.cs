@@ -2,6 +2,7 @@
 using Catridges.Domain.Entity;
 using Catridges.Domain.Enum;
 using Catridges.Domain.Response;
+using Catridges.Domain.ViewModels;
 using Catridges.Service.Interfases;
 
 namespace Catridges.Service.Implementations;
@@ -138,6 +139,31 @@ public class DocumentService : IDocumentService
         catch (Exception e)
         {
             return new BaseResponse<bool>()
+            {
+                Description = $"[Delete] : {e.Message}"
+            };
+        }
+    }
+
+    public async Task<BaseResponse<DocumentCreateViewModel>> GetDocumentCreateViewModel()
+    {
+        var baseResponse = new BaseResponse<DocumentCreateViewModel>();
+        try
+        {
+            var documentCreateViewModel = await _documentRepository.GetDocumentCreateViewModel();
+            if (documentCreateViewModel != null)
+            {
+                baseResponse.Data = documentCreateViewModel;
+                baseResponse.StatusCode = StatusCode.OK;
+                return baseResponse;
+            }
+
+            baseResponse.StatusCode = StatusCode.NoOk;
+            return baseResponse;
+        }
+        catch (Exception e)
+        {
+            return new BaseResponse<DocumentCreateViewModel>()
             {
                 Description = $"[Delete] : {e.Message}"
             };

@@ -1,4 +1,4 @@
-﻿@model bool
+﻿@model Catridges.Domain.ViewModels.DocumentCreateViewModel
 
 @{
     ViewBag.Title = "title";
@@ -9,19 +9,15 @@
     <div class="mb-3">
         <label for="model" class="form-label">Дата</label>
         <input type="text" class="form-control" name="model" id="model">
-        <label for="model" class="form-label">Дата</label>
-        <input type="text" class="form-control" name="model" id="model">
-        <label for="model" class="form-label">Дата</label>
-        <input type="text" class="form-control" name="model" id="model">
-        <label for="model" class="form-label">Дата</label>
-        <input type="text" class="form-control" name="model" id="model">
-        <label for="model" class="form-label">Дата</label>
-        <input type="text" class="form-control" name="model" id="model">
-        <label for="model" class="form-label">Дата</label>
-        <input type="text" class="form-control" name="model" id="model">
-        <label for="model" class="form-label">Дата</label>
-        <input type="text" class="form-control" name="model" id="model">
-        
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Выберите катридж</option>
+            @{
+                foreach (var item in @Model.Catridges)
+                {
+                    <option>@item.Model</option>
+                }
+            }
+        </select>
     </div>
     <button type="submit" class="btn btn-primary">Создать</button>
 </form>

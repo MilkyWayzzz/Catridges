@@ -1,5 +1,6 @@
 ﻿using Catridges.Domain.Entity;
 using Catridges.Domain.Response;
+using Catridges.Domain.ViewModels;
 
 namespace Catridges.Service.Interfases;
 
@@ -14,4 +15,6 @@ public interface IDocumentService
     Task<BaseResponse<List<Document>>> ReadAll();
     
     Task<BaseResponse<bool>> Delete(int id);
+
+    Task<BaseResponse<DocumentCreateViewModel>> GetDocumentCreateViewModel();
 }

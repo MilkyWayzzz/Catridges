@@ -38,10 +38,13 @@ public class DocumentController : Controller
     }
 
     [HttpGet]
-    public IActionResult CreateDocument()
+    public async Task<IActionResult> CreateDocument()
     {
-        var response = new BaseResponse<DocumentCreateViewModel>();
-        
+        var response = await _documentService.GetDocumentCreateViewModel();
+        if (response.StatusCode == Domain.Enum.StatusCode.OK)
+        {
+            return View(response.Data);
+        }
         return View();
     }
 
@@ -71,7 +74,7 @@ public class DocumentController : Controller
         var response = await _documentService.Create(document);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllDocuments");
         }
         return View();
     }
