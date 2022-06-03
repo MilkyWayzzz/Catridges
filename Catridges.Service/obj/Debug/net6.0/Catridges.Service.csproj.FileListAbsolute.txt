@@ -1,0 +1,17 @@
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.Service.deps.json
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.Service.dll
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.Service.pdb
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.DAL.dll
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.Domain.dll
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.DAL.pdb
+D:\c#\Catridges\Catridges.Service\bin\Debug\net6.0\Catridges.Domain.pdb
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.csproj.AssemblyReference.cache
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.AssemblyInfoInputs.cache
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.AssemblyInfo.cs
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.csproj.CoreCompileInputs.cache
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.csproj.CopyComplete
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.dll
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\refint\Catridges.Service.dll
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\Catridges.Service.pdb
+D:\c#\Catridges\Catridges.Service\obj\Debug\net6.0\ref\Catridges.Service.dll

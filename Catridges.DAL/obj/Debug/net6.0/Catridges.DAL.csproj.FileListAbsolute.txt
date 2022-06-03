@@ -1,0 +1,17 @@
+D:\c#\Catridges\Catridges.DAL\bin\Debug\net6.0\Catridges.DAL.deps.json
+D:\c#\Catridges\Catridges.DAL\bin\Debug\net6.0\Catridges.DAL.dll
+D:\c#\Catridges\Catridges.DAL\bin\Debug\net6.0\Catridges.DAL.pdb
+D:\c#\Catridges\Catridges.DAL\bin\Debug\net6.0\Catridges.Domain.dll
+D:\c#\Catridges\Catridges.DAL\bin\Debug\net6.0\Catridges.Domain.pdb
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.csproj.AssemblyReference.cache
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.AssemblyInfoInputs.cache
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.AssemblyInfo.cs
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.csproj.CoreCompileInputs.cache
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.csproj.CopyComplete
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.dll
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\refint\Catridges.DAL.dll
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.pdb
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\ref\Catridges.DAL.dll
+D:\c#\Catridges\Catridges.DAL\bin\Debug\net6.0\Catridges.DAL.runtimeconfig.json
+D:\c#\Catridges\Catridges.DAL\obj\Debug\net6.0\Catridges.DAL.genruntimeconfig.cache

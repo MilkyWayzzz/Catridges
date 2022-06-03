@@ -1,0 +1,27 @@
+﻿@model Catridges.Domain.Entity.Catridge
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<table class="table">
+    <thead>
+    <tr>
+        <td>#</td>
+        <td>Модель</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td width="10">1</td>
+        <td>@Model.Model</td>
+        <td width="20"><a class=" btn btn-outline-info" asp-controller="Catridge" asp-action="UpdateCatridge" asp-route-id="@Model.Id">Изменить</a></td>
+        <td width="20"><a class=" btn btn-outline-danger" asp-controller="Catridge" asp-action="DeleteCatridge" asp-route-id="@Model.Id">Удалить</a></td>
+    </tr>
+    </tbody>
+</table>
+<div style="position: center">
+    <a class="btn btn-outline-info"  asp-controller="Catridge" asp-action="GetAllCatridges">Назад</a>
+</div>
+

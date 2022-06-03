@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Catridges.Domain.Entity.Document>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-auto">
+            <a class="btn btn-outline-success" asp-controller="Document" asp-action="CreateDocument">Создать</a>
+        </div>
+        <div class="col-10">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Номер</td>
+                    <td>Дата</td>
+                    <td>Картридж</td>
+                    <td>Статус</td>
+                    <td>Принтер</td>
+                    <td>Подразделение</td>
+                </tr>
+                </thead>
+                <tbody>
+                @{
+                    int i = 1;
+                    foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td width="10">@i</td>
+                            <td>@item.Number</td>
+                            <td>@item.DateTime</td>
+                            <td>@item.Catridge?.Model</td>
+                            <td>@item.State?.Name</td>
+                            <td>@item.Printer?.Model</td>
+                            <td>@item.Subdivision?.Name</td>
+                            <td width="20">
+                                <a class="btn btn-outline-primary" asp-controller="Document" asp-action="GetDocument" asp-route-id="@item.Id">Просмотреть</a>
+                            </td>
+                            <td width="20">
+                                <a class=" btn btn-outline-info" asp-controller="Document" asp-action="UpdateDocument" asp-route-id="@item.Id">Изменить</a>
+                            </td>
+                            <td width="20">
+                                <a class=" btn btn-outline-danger" asp-controller="Document" asp-action="DeleteDocument" asp-route-id="@item.Id">Удалить</a>
+                            </td>
+                            
+                        </tr>
+                        i++;
+                    }
+                }
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

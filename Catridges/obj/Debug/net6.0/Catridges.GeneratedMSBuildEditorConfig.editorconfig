@@ -1,0 +1,144 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Catridges
+build_property.RootNamespace = Catridges
+build_property.ProjectDir = D:\c#\Catridges\Catridges\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\c#\Catridges\Catridges
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/c\#/Catridges/Catridges/Views/Catridge/CreateCatridge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0cmlkZ2VcQ3JlYXRlQ2F0cmlkZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Catridge/DeleteCatridge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0cmlkZ2VcRGVsZXRlQ2F0cmlkZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Catridge/GetAllCatridges.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0cmlkZ2VcR2V0QWxsQ2F0cmlkZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Catridge/GetCatridge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0cmlkZ2VcR2V0Q2F0cmlkZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Catridge/UpdateCatridge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0cmlkZ2VcVXBkYXRlQ2F0cmlkZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Document/CreateDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcQ3JlYXRlRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Document/DeleteDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcRGVsZXRlRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Document/GetAllDocuments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcR2V0QWxsRG9jdW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Document/GetDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcR2V0RG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Document/UpdateDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRcVXBkYXRlRG9jdW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Printer/CreatePrinter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbnRlclxDcmVhdGVQcmludGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Printer/DeletePrinter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbnRlclxEZWxldGVQcmludGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Printer/GetAllPrinters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbnRlclxHZXRBbGxQcmludGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Printer/GetPrinter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbnRlclxHZXRQcmludGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Printer/UpdatePrinter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbnRlclxVcGRhdGVQcmludGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/State/CreateState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVcQ3JlYXRlU3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/State/DeleteState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVcRGVsZXRlU3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/State/GetAllStates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVcR2V0QWxsU3RhdGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/State/GetState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVcR2V0U3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/State/UpdateState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGVcVXBkYXRlU3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Subdivision/CreateSubdivision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViZGl2aXNpb25cQ3JlYXRlU3ViZGl2aXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Subdivision/DeleteSubdivision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViZGl2aXNpb25cRGVsZXRlU3ViZGl2aXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Subdivision/GetAllSubdivisions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViZGl2aXNpb25cR2V0QWxsU3ViZGl2aXNpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Subdivision/GetSubdivision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViZGl2aXNpb25cR2V0U3ViZGl2aXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Subdivision/UpdateSubdivision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViZGl2aXNpb25cVXBkYXRlU3ViZGl2aXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/c\#/Catridges/Catridges/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-d8blpaps04

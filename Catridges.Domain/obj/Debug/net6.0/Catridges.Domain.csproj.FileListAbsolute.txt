@@ -1,0 +1,12 @@
+D:\c#\Catridges\Catridges.Domain\bin\Debug\net6.0\Catridges.Domain.deps.json
+D:\c#\Catridges\Catridges.Domain\bin\Debug\net6.0\Catridges.Domain.dll
+D:\c#\Catridges\Catridges.Domain\bin\Debug\net6.0\Catridges.Domain.pdb
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.csproj.AssemblyReference.cache
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.AssemblyInfoInputs.cache
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.AssemblyInfo.cs
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.csproj.CoreCompileInputs.cache
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.dll
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\refint\Catridges.Domain.dll
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\Catridges.Domain.pdb
+D:\c#\Catridges\Catridges.Domain\obj\Debug\net6.0\ref\Catridges.Domain.dll

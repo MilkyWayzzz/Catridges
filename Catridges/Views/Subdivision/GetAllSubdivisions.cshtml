@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Catridges.Domain.Entity.Subdivision>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-auto">
+            <a class="btn btn-outline-success" asp-controller="Subdivision" asp-action="CreateSubdivision">Создать</a>
+        </div>
+        <div class="col-10">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Наименование</td>
+                </tr>
+                </thead>
+                <tbody>
+                @{
+                    int i = 1;
+                    foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td width="10">@i</td>
+                            <td>@item.Name</td>
+                            <td width="20">
+                                <a class="btn btn-outline-primary" asp-controller="Subdivision" asp-action="GetSubdivision" asp-route-id="@item.Id">Просмотреть</a>
+                            </td>
+                            <td width="20">
+                                <a class=" btn btn-outline-info" asp-controller="Subdivision" asp-action="UpdateSubdivision" asp-route-id="@item.Id">Изменить</a>
+                            </td>
+                            <td width="20">
+                                <a class=" btn btn-outline-danger" asp-controller="Subdivision" asp-action="DeleteSubdivision" asp-route-id="@item.Id">Удалить</a>
+                            </td>
+                            
+                        </tr>
+                        i++;
+                    }
+                }
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

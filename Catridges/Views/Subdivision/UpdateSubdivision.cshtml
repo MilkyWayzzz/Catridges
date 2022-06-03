@@ -1,0 +1,21 @@
+﻿@model Catridges.Domain.Entity.Subdivision
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label for="model" class="form-label">Наименование</label>
+        <input type="hidden" name="id" id="id" value="@Model.Id"/>
+        <input type="text" class="form-control" name="model" id="model" value="@Model.Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Изменить</button>
+</form>
+<br/>
+<br/>
+<br/>
+<div>
+    <a class="btn btn-outline-info"  asp-controller="Subdivision" asp-action="GetAllSubdivisions">Назад</a>
+</div>
