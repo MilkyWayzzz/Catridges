@@ -49,10 +49,11 @@ public class DocumentController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateDocument(Catridge catridge, Printer printer, State state, Subdivision subdivision,
+    public async Task<IActionResult> CreateDocument(int catridgeId, int printerId, int stateId, int subdivisionId,
         DateTime dateTime)
     {
         var documents = await _documentService.ReadAll();
+        var documentview = await _documentService.GetDocumentCreateViewModel();
         int lastDocumentNumber = 0;
         foreach (var item in documents.Data)
         {
@@ -63,10 +64,10 @@ public class DocumentController : Controller
         }
         var document = new Document()
         {
-            Catridge = catridge,
-            Printer = printer,
-            State = state,
-            Subdivision = subdivision,
+            Catridge = documentview.Data.Catridges.FirstOrDefault(x=>x.Id == catridgeId) ,
+            Printer = documentview.Data.Printers.FirstOrDefault(x=>x.Id == printerId),
+            State = documentview.Data.States.FirstOrDefault(x=>x.Id == stateId),
+            Subdivision = documentview.Data.Subdivisions.FirstOrDefault(x=>x.Id == subdivisionId),
             DateTime = dateTime,
             Number = lastDocumentNumber
             
@@ -82,9 +83,11 @@ public class DocumentController : Controller
     [HttpGet]
     public async Task<IActionResult> UpdateDocument(int id)
     {
-        var response = await _documentService.Read(id);
-        if (response.StatusCode == Domain.Enum.StatusCode.OK)
+        var document = await _documentService.Read(id);
+        var response = await _documentService.GetDocumentCreateViewModel();
+        if (document.StatusCode == Domain.Enum.StatusCode.OK)
         {
+            ViewBag.Date = document.Data.DateTime;
             return View(response.Data);
         }
 
@@ -92,17 +95,18 @@ public class DocumentController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> UpdateDocument(int id, Catridge catridge, Printer printer, State state, Subdivision subdivision,
+    public async Task<IActionResult> UpdateDocument(int id, int catridgeId, int printerId, int stateId, int subdivisionId,
         DateTime dateTime)
     {
+        var documentview = await _documentService.GetDocumentCreateViewModel();
         var documentold = await _documentService.Read(id);
         var numberDocument = documentold.Data.Number;
         var document = new Document()
         {
-            Catridge = catridge,
-            Printer = printer,
-            State = state,
-            Subdivision = subdivision,
+            Catridge = documentview.Data.Catridges.FirstOrDefault(x=>x.Id == catridgeId),
+            Printer = documentview.Data.Printers.FirstOrDefault(x=>x.Id == printerId),
+            State = documentview.Data.States.FirstOrDefault(x=>x.Id == stateId),
+            Subdivision = documentview.Data.Subdivisions.FirstOrDefault(x=>x.Id == subdivisionId),
             DateTime = dateTime,
             Number = numberDocument
             

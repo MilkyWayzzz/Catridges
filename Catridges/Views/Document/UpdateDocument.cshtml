@@ -1,8 +1,71 @@
-﻿@model Catridges.Domain.Entity.Document
+﻿@model Catridges.Domain.ViewModels.DocumentCreateViewModel
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>title</h2>
+<form method="post">
+    <div class="mb-3">
+        <div>
+            <label for="date" class="form-label">Дата</label>
+            <input type="datetime-local" class="form-control" name="dateTime" id="date" value="@ViewBag.Date">
+        </div>
+        <div>
+            <label for="catridge" class="form-label">Катридж</label>
+            <select class="form-select" name="catridgeId" id="catridge" aria-label="Default select example">
+                <option selected>Выберите катридж</option>
+                @{
+                    foreach (var item in @Model.Catridges)
+                    {
+                        <option value="@item.Id">@item.Model</option>
+                    }
+                }
+            </select>
+        </div>
+        <div>
+            <label for="state" class="form-label">Статус</label>
+            <select class="form-select" name="stateId" id="state" aria-label="Default select example">
+                <option selected>Выберите статус</option>
+                @{
+                    foreach (var item in @Model.States)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                }
+            </select>
+        </div>
+        <div>
+            <label for="printer" class="form-label">Принтер</label>
+            <select class="form-select" name="printerId" id="printer" aria-label="Default select example">
+                <option selected>Выберите принтер</option>
+                @{
+                    foreach (var item in @Model.Printers)
+                    {
+                        <option value="@item.Id">@item.Model</option>
+                    }
+                }
+            </select>
+        </div>
+        <div>
+            <label for="subdivision" class="form-label">Подразделение</label>
+            <select class="form-select" name="subdivisionId" id="subdivision" aria-label="Default select example">
+                <option selected>Выберите подразделение</option>
+                @{
+                    foreach (var item in @Model.Subdivisions)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Изменить</button>
+</form>
+<br/>
+<br/>
+<br/>
+<div>
+    <a class="btn btn-outline-info"  asp-controller="Document" asp-action="GetAllDocuments">Назад</a>
+</div>
