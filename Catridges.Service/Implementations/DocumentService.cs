@@ -96,13 +96,28 @@ public class DocumentService : IDocumentService
         }
     }
 
-    public async Task<BaseResponse<List<Document>>> ReadAll()
+    public async Task<BaseResponse<List<Document>>> ReadAll(string? searchString, string? sortOrder)
     {
         var baseResponse = new BaseResponse<List<Document>>();
         try
         {
-            var documents = await _documentRepository.ReadAll();
-            if (documents.Count > 0)
+            List<Document> documents; 
+            documents = await _documentRepository.ReadAll();
+            switch (sortOrder)
+            {
+                case "number_desc" :
+                   documents = new List<Document>(documents.OrderByDescending(x => x.Number));
+                    break;
+                default:
+                    documents = new List<Document>(documents.OrderBy(x => x.Number));
+                    break;
+            }
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                documents = new List<Document>(documents.Where(x => x.Number == Convert.ToInt32(searchString)));
+            }
+            if (documents.Count() > 0)
             {
                 baseResponse.StatusCode = StatusCode.OK;
                 baseResponse.Data = documents;

@@ -49,7 +49,7 @@ public class SubdivisionController : Controller
         var response = await _subdivisionService.Create(subdivision);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllSubdivisions");
         }
         return View();
     }
@@ -83,7 +83,7 @@ public class SubdivisionController : Controller
         var response = await _subdivisionService.Delete(id);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllSubdivisions");
         }
         return View();
     }

@@ -23,11 +23,11 @@ public class DocumentRepository : IDocumentRepository
 
     public async Task<Document> Read(int id)
     {
-        return await _db.Documents.Include(x => x.Catridge)
+        return (await _db.Documents.Include(x => x.Catridge)
             .Include(x => x.Printer)
             .Include(x => x.State)
             .Include(x => x.Subdivision)
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .FirstOrDefaultAsync(x => x.Id == id))!;
     }
 
     public async Task<List<Document>> ReadAll()

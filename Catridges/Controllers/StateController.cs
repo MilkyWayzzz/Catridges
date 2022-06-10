@@ -50,7 +50,7 @@ public class StateController : Controller
       var response = await _stateServise.Create(state);
       if (response.StatusCode == Domain.Enum.StatusCode.OK)
       {
-         return View(response.Data);
+         return RedirectToAction("GetAllStates");
       }
       return View();
    }
@@ -84,7 +84,7 @@ public class StateController : Controller
       var response = await _stateServise.Delete(id);
       if (response.StatusCode == Domain.Enum.StatusCode.OK)
       {
-         return View(response.Data);
+         return RedirectToAction("GetAllStates");
       }
       return View();
    }

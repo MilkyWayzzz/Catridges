@@ -3,12 +3,10 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - Catridges</title>
+    <title>@ViewData["Title"] - Управление катриджами</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="css/dashboard.css" rel="stylesheet">
-    <link href="css/dashboard.css" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="css/site.css" asp-append-version="true"/>
 </head>
 <body>
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -16,78 +14,80 @@
     <button class="navbar-toggle position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggle-icon"></span>
     </button>
-    <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Поиск" aria-label="Search">
+    <div class="form-control form-control-dark w-100 rounded-0 border-0">
+       <form asp-action="GetAllDocuments" method="get">
+           <input class="w-75" name="searchString" type="text" placeholder="Поиск" aria-label="Search">
+           <input type="submit" value="Search" class="btn btn-dark"/>
+       </form> 
+    </div>
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
             <a class="nav-link px-3" href="#">Выход</a>
         </div>
     </div>
 </header>
+
 <div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" asp-controller="Document" asp-action="GetAllDocuments">
-              <span data-feather="home" class="align-text-bottom"></span>
-              Главная
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file" class="align-text-bottom"></span>
-              Выход
-            </a>
-          </li>
-        </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-          <span>Управление моделями</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle" class="align-text-bottom"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-controller="Catridge" asp-action="GetAllCatridges">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Картриджи
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-controller="Printer" asp-action="GetAllPrinters">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Принтеры
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-controller="State" asp-action="GetAllStates">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Статусы
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-controller="Subdivision" asp-action="GetAllSubdivisions">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Подразделения
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" asp-controller="Document" asp-action="GetAllDocuments">
+                            <span data-feather="home" class="align-text-bottom"></span>
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file" class="align-text-bottom"></span>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+      
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                    <span>Управление моделями</span>
+                    <a class="link-secondary" href="#" aria-label="Add a new report">
+                        <span data-feather="plus-circle" class="align-text-bottom"></span>
+                    </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Catridge" asp-action="GetAllCatridges">
+                            <span data-feather="file-text" class="align-text-bottom"></span>
+                            Картриджи
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Printer" asp-action="GetAllPrinters">
+                            <span data-feather="file-text" class="align-text-bottom"></span>
+                            Принтеры
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="State" asp-action="GetAllStates">
+                            <span data-feather="file-text" class="align-text-bottom"></span>
+                            Статусы
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Subdivision" asp-action="GetAllSubdivisions">
+                            <span data-feather="file-text" class="align-text-bottom"></span>
+                            Подразделения
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+      
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            @RenderBody()
+        </main>
+    </div>
 </div>
 
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
 
-@* <footer class="border-top footer text-muted"> *@
-@*      *@
-@* </footer> *@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>

@@ -5,17 +5,22 @@
     Layout = "_Layout";
 }
 
+<body>
+<div>
+    <br/>
+    <h2>Статусы. Изменение статуса @Model.Name.</h2>
+    <br/>
+</div>
 <form method="post">
     <div class="mb-3">
-        <label for="model" class="form-label">Наименование</label>
+        <label for="model" class="form-label fw-bold">Наименование статуса</label>
         <input type="hidden" name="id" id="id" value="@Model.Id"/>
-        <input type="text" class="form-control" name="model" id="model" value="@Model.Name">
+        <input type="text" class="form-control form-control-dark" name="model" id="model" value="@Model.Name">
     </div>
-    <button type="submit" class="btn btn-primary">Изменить</button>
+    <button type="submit" class="btn btn-dark text-white">Изменить</button>
 </form>
 <br/>
-<br/>
-<br/>
 <div>
-    <a class="btn btn-outline-info"  asp-controller="State" asp-action="GetAllStates">Назад</a>
+    <a class="btn btn-dark text-white" asp-controller="State" asp-action="GetAllStates">Назад</a>
 </div>
+</body>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aauXrp4XcfLEIpCzXsXsNVcQqAb47TpRi3vTEom5v8A=",
+  "Hash": "EVk8wJpOopLGUkCnYGul2hNH2xUyp6rrp9P9KBPNyOU=",
   "Source": "Catridges",
   "BasePath": "_content/Catridges",
   "Mode": "Default",
@@ -68,23 +68,6 @@
       "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
     },
     {
-      "Identity": "D:\\c#\\Catridges\\Catridges\\wwwroot\\css\\dashboard.rtl.css",
-      "SourceId": "Catridges",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\c#\\Catridges\\Catridges\\wwwroot\\",
-      "BasePath": "_content/Catridges",
-      "RelativePath": "css/dashboard.rtl.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\dashboard.rtl.css"
-    },
-    {
       "Identity": "D:\\c#\\Catridges\\Catridges\\wwwroot\\css\\site.css",
       "SourceId": "Catridges",
       "SourceType": "Discovered",
@@ -134,23 +117,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
-    },
-    {
-      "Identity": "D:\\c#\\Catridges\\Catridges\\wwwroot\\js\\dashboard.js",
-      "SourceId": "Catridges",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\c#\\Catridges\\Catridges\\wwwroot\\",
-      "BasePath": "_content/Catridges",
-      "RelativePath": "js/dashboard.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\dashboard.js"
     },
     {
       "Identity": "D:\\c#\\Catridges\\Catridges\\wwwroot\\js\\site.js",

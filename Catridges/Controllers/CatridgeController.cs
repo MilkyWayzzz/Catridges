@@ -49,7 +49,7 @@ public class CatridgeController : Controller
         var response = await _catridgeService.Create(catridge);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllCatridges");
         }
         return View();
     }
@@ -83,7 +83,7 @@ public class CatridgeController : Controller
         var response = await _catridgeService.Delete(id);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllCatridges");
         }
         return View();
     }

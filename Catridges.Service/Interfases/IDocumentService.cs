@@ -12,9 +12,10 @@ public interface IDocumentService
     
     Task<BaseResponse<bool>> Update(int id, Document document);
     
-    Task<BaseResponse<List<Document>>> ReadAll();
+    Task<BaseResponse<List<Document>>> ReadAll(string? searchString, string? sortOrder);
     
     Task<BaseResponse<bool>> Delete(int id);
 
     Task<BaseResponse<DocumentCreateViewModel>> GetDocumentCreateViewModel();
+    
 }

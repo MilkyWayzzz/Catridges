@@ -14,11 +14,13 @@ public class DocumentController : Controller
     {
         _documentService = documentService;
     }
-
+    
     [HttpGet]
-    public async Task<IActionResult> GetAllDocuments()
+    public async Task<IActionResult> GetAllDocuments(string? searchString, string sortOrder)
     {
-        var response = await _documentService.ReadAll();
+        ViewBag.NumberSortParam = string.IsNullOrEmpty(sortOrder) ? "number_desc" : "";
+        var response = await _documentService.ReadAll(searchString, sortOrder);
+        
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
             return View(response.Data.ToList());
@@ -52,15 +54,24 @@ public class DocumentController : Controller
     public async Task<IActionResult> CreateDocument(int catridgeId, int printerId, int stateId, int subdivisionId,
         DateTime dateTime)
     {
-        var documents = await _documentService.ReadAll();
+        var documents = await _documentService.ReadAll(null,null);
         var documentview = await _documentService.GetDocumentCreateViewModel();
         int lastDocumentNumber = 0;
-        foreach (var item in documents.Data)
+        if (documents.Data == null)
         {
-            if (item.Number > lastDocumentNumber)
+            lastDocumentNumber = 1;
+        }
+        else
+        {
+            foreach (var item in documents.Data)
             {
-                lastDocumentNumber = item.Number;
+                if (item.Number > lastDocumentNumber)
+                {
+                    lastDocumentNumber = item.Number;
+                }
             }
+
+            lastDocumentNumber++;
         }
         var document = new Document()
         {
@@ -126,7 +137,7 @@ public class DocumentController : Controller
         var response = await _documentService.Delete(id);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllDocuments");
         }
 
         return View();

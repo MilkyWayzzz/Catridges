@@ -48,7 +48,7 @@ public class PrinterController : Controller
         var response = await _printerService.Create(printer);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllPrinters");
         }
         return View();
     }
@@ -82,7 +82,7 @@ public class PrinterController : Controller
         var response = await _printerService.Delete(id);
         if (response.StatusCode == Domain.Enum.StatusCode.OK)
         {
-            return View(response.Data);
+            return RedirectToAction("GetAllPrinters");
         }
         return View();
     }

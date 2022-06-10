@@ -5,14 +5,20 @@
     Layout = "_Layout";
 }
 
+<body>
+<div>
+    <br/>
+    <h2>Документы. Изменение документа.</h2>
+    <br/>
+</div>
 <form method="post">
     <div class="mb-3">
         <div>
-            <label for="date" class="form-label">Дата</label>
+            <label for="date" class="form-label fw-bold">Дата</label>
             <input type="datetime-local" class="form-control" name="dateTime" id="date" value="@ViewBag.Date">
         </div>
         <div>
-            <label for="catridge" class="form-label">Катридж</label>
+            <label for="catridge" class="form-label fw-bold">Катридж</label>
             <select class="form-select" name="catridgeId" id="catridge" aria-label="Default select example">
                 <option selected>Выберите катридж</option>
                 @{
@@ -24,7 +30,7 @@
             </select>
         </div>
         <div>
-            <label for="state" class="form-label">Статус</label>
+            <label for="state" class="form-label fw-bold">Статус</label>
             <select class="form-select" name="stateId" id="state" aria-label="Default select example">
                 <option selected>Выберите статус</option>
                 @{
@@ -36,7 +42,7 @@
             </select>
         </div>
         <div>
-            <label for="printer" class="form-label">Принтер</label>
+            <label for="printer" class="form-label fw-bold">Принтер</label>
             <select class="form-select" name="printerId" id="printer" aria-label="Default select example">
                 <option selected>Выберите принтер</option>
                 @{
@@ -48,7 +54,7 @@
             </select>
         </div>
         <div>
-            <label for="subdivision" class="form-label">Подразделение</label>
+            <label for="subdivision" class="form-label fw-bold">Подразделение</label>
             <select class="form-select" name="subdivisionId" id="subdivision" aria-label="Default select example">
                 <option selected>Выберите подразделение</option>
                 @{
@@ -64,8 +70,7 @@
     <button type="submit" class="btn btn-primary">Изменить</button>
 </form>
 <br/>
-<br/>
-<br/>
 <div>
-    <a class="btn btn-outline-info"  asp-controller="Document" asp-action="GetAllDocuments">Назад</a>
+    <a class="btn btn-dark text-white" asp-controller="Document" asp-action="GetAllDocuments">Назад</a>
 </div>
+</body>
