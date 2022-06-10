@@ -4,19 +4,21 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-
+<body>
+<div>
+    <br/>
+    <h2>Картриджи. Создание нового картриджа.</h2>
+    <br/>
+</div>
 <form method="post">
     <div class="mb-3">
-        <label for="model" class="form-label">Наименование модели</label>
-        <input type="text" class="form-control" name="model" id="model">
+        <label for="model" class="form-label fw-bold">Наименование модели</label>
+        <input type="text" class="form-control form-control-dark" name="model" id="model">
     </div>
-    <button type="submit" class="btn btn-primary">Создать</button>
+    <button type="submit" class="btn btn-outline-darkdark text-white">Создать</button>
 </form>
 <br/>
-<br/>
-<br/>
 <div>
-    <a class="btn btn-outline-info"  asp-controller="Catridge" asp-action="GetAllCatridges">Назад</a>
+    <a class="btn btn-dark text-white" asp-controller="Catridge" asp-action="GetAllCatridges">Назад</a>
 </div>
-
-
+</body>

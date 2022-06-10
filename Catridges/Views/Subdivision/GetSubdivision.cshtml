@@ -5,22 +5,30 @@
     Layout = "_Layout";
 }
 
-<table class="table">
-    <thead>
-    <tr>
-        <td>#</td>
-        <td>Наименование</td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td width="10">1</td>
-        <td>@Model.Name</td>
-        <td width="20"><a class=" btn btn-outline-info" asp-controller="Subdivision" asp-action="UpdateSubdivision" asp-route-id="@Model.Id">Изменить</a></td>
-        <td width="20"><a class=" btn btn-outline-danger" asp-controller="Subdivision" asp-action="DeleteSubdivision" asp-route-id="@Model.Id">Удалить</a></td>
-    </tr>
-    </tbody>
-</table>
-<div style="position: center">
-    <a class="btn btn-outline-info"  asp-controller="Subdivision" asp-action="GetAllSubdivisions">Назад</a>
+<body>
+<br/>
+<h2>Подразделения.
+    Просмотр подразделения @Model.Name.</h2>
+<br/>
+<div class="table-active">
+    <table class="table table-striped table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Наименование</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td width="40">1</td>
+            <td width="*">@Model.Name</td>
+            <td width="80"><a class="btn btn-outline-dark" asp-controller="Subdivision" asp-action="UpdateSubdivision" asp-route-id="@Model.Id">Изменить</a></td>
+            <td width="80"><a class="btn btn-outline-dark" asp-controller="Subdivision" asp-action="DeleteSubdivision" asp-route-id="@Model.Id">Удалить</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="position: center" >
+        <a class="btn btn-dark"  asp-controller="Subdivision" asp-action="GetAllSubdivisions">Назад</a>
+    </div>
 </div>
+</body>

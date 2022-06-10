@@ -1,78 +1,45 @@
 ﻿@model IEnumerable<Catridges.Domain.Entity.Catridge>
-
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-<main class="col-md-9 ms-sm-auto col-lg-auto px-md-5">
-    <h2>Картриджи. Модуль управления картриджами.</h2>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Модель</th>
-              </tr>
-            </thead>
-            <tbody>
-            @{
-                int i = 1;
-                foreach (var item in @Model)
-                {
-                    <tr>
-                        <td width="40">@i</td>
-                        <td width="*">@item.Model</td>
-                        <td width="20"><a class="btn-outline-dark" asp-controller="Catridge" asp-action="GetCatridge" asp-route-id="@item.Id">Открыть</a></td>
-                        <td width="20"><a class="btn-outline-dark" asp-controller="Catridge" asp-action="UpdateCatridge" asp-route-id="@item.Id">Изменить</a></td>
-                        <td width="20"><a class="btn-outline-dark" asp-controller="Catridge" asp-action="DeleteCatridge" asp-route-id="@item.Id">Удалить</a></td>
-                    </tr>
-                    i++;
-                }
-            }
-            </tbody>
-          </table>
-        </div>
-      </main>
-@*<div class="container">
-    <div class="row">
-        <div class="col-auto">
-            <a class="btn btn-outline-success" asp-controller="Catridge" asp-action="CreateCatridge">Создать</a>
-        </div>
-        <div class="col-10">
-            <table class="table">
-                <thead>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+<br/>
+<h2>Картриджи. Модуль управления картриджами.</h2>
+<br/>
+<div class="table-active">
+    <table class="table table-striped table-sm">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Модель</th>
+        </tr>
+        </thead>
+        <tbody>
+        @{
+            int i = 1;
+            foreach (var item in @Model)
+            {
                 <tr>
-                    <td>#</td>
-                    <td>Модель</td>
+                    <td width="40">@i</td>
+                    <td width="*">@item.Model</td>
+                    <td width="80"><a class="btn btn-outline-dark" asp-controller="Catridge" asp-action="GetCatridge" asp-route-id="@item.Id">Открыть</a></td>
+                    <td width="80"><a class="btn btn-outline-dark" asp-controller="Catridge" asp-action="UpdateCatridge" asp-route-id="@item.Id">Изменить</a></td>
+                    <td width="80"><a class="btn btn-outline-dark" asp-controller="Catridge" asp-action="DeleteCatridge" asp-route-id="@item.Id">Удалить</a></td>
                 </tr>
-                </thead>
-                <tbody>
-                @{
-                    int i = 1;
-                    foreach (var item in @Model)
-                    {
-                        <tr>
-                            <td width="10">@i</td>
-                            <td>@item.Model</td>
-                            <td width="20">
-                                <a class="btn btn-outline-primary" asp-controller="Catridge" asp-action="GetCatridge" asp-route-id="@item.Id">Просмотреть</a>
-                            </td>
-                            <td width="20">
-                                <a class=" btn btn-outline-info" asp-controller="Catridge" asp-action="UpdateCatridge" asp-route-id="@item.Id">Изменить</a>
-                            </td>
-                            <td width="20">
-                                <a class=" btn btn-outline-danger" asp-controller="Catridge" asp-action="DeleteCatridge" asp-route-id="@item.Id">Удалить</a>
-                            </td>
+                i++;
+            }
+        }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a class="btn btn-dark text-white text-center"  asp-controller="Catridge" asp-action="CreateCatridge">Добавить картридж</a>
+</div>
 
-                        </tr>
-                        i++;
-                    }
-                }
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>*@
-
-
+</body>

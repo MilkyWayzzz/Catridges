@@ -4,46 +4,42 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-<div class="container">
-    <div class="row">
-        <div class="col-auto">
-            <a class="btn btn-outline-success" asp-controller="Subdivision" asp-action="CreateSubdivision">Создать</a>
-        </div>
-        <div class="col-10">
-            <table class="table">
-                <thead>
+
+<body>
+<br/>
+<h2>Подразделения.
+    Модуль управления подразделениями.</h2>
+<br/>
+<div class="table-active">
+    <table class="table table-striped table-sm">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Наименование</th>
+        </tr>
+        </thead>
+        <tbody>
+        @{
+            int i = 1;
+            foreach (var item in @Model)
+            {
                 <tr>
-                    <td>#</td>
-                    <td>Наименование</td>
+                    <td width="40">@i</td>
+                    <td width="*">@item.Name</td>
+                    <td width="80"><a class="btn btn-outline-dark" asp-controller="Subdivision" asp-action="GetSubdivision" asp-route-id="@item.Id">Открыть</a></td>
+                    <td width="80"><a class="btn btn-outline-dark" asp-controller="Subdivision" asp-action="UpdateSubdivision" asp-route-id="@item.Id">Изменить</a></td>
+                    <td width="80"><a class="btn btn-outline-dark" asp-controller="Subdivision" asp-action="DeleteSubdivision" asp-route-id="@item.Id">Удалить</a></td>
                 </tr>
-                </thead>
-                <tbody>
-                @{
-                    int i = 1;
-                    foreach (var item in @Model)
-                    {
-                        <tr>
-                            <td width="10">@i</td>
-                            <td>@item.Name</td>
-                            <td width="20">
-                                <a class="btn btn-outline-primary" asp-controller="Subdivision" asp-action="GetSubdivision" asp-route-id="@item.Id">Просмотреть</a>
-                            </td>
-                            <td width="20">
-                                <a class=" btn btn-outline-info" asp-controller="Subdivision" asp-action="UpdateSubdivision" asp-route-id="@item.Id">Изменить</a>
-                            </td>
-                            <td width="20">
-                                <a class=" btn btn-outline-danger" asp-controller="Subdivision" asp-action="DeleteSubdivision" asp-route-id="@item.Id">Удалить</a>
-                            </td>
-                            
-                        </tr>
-                        i++;
-                    }
-                }
-                
-                </tbody>
-            </table>
-        </div>
-    </div>
+                i++;
+            }
+        }
+        </tbody>
+    </table>
 </div>
+<div>
+    <a class="btn btn-dark text-white text-center"  asp-controller="Subdivision" asp-action="CreateSubdivision">Добавить подразделение</a>
+</div>
+
+</body>
 
 
